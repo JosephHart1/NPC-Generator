@@ -1,0 +1,10 @@
+C:\Users\joeis\Documents\GitHub\NPC Generator\bin\Release\NPC Generator.exe.config
+C:\Users\joeis\Documents\GitHub\NPC Generator\bin\Release\NPC Generator.exe
+C:\Users\joeis\Documents\GitHub\NPC Generator\bin\Release\NPC Generator.pdb
+C:\Users\joeis\Documents\GitHub\NPC Generator\obj\Release\NPC Generator.csprojAssemblyReference.cache
+C:\Users\joeis\Documents\GitHub\NPC Generator\obj\Release\NPC_Generator.NPCGenerator.resources
+C:\Users\joeis\Documents\GitHub\NPC Generator\obj\Release\NPC_Generator.Properties.Resources.resources
+C:\Users\joeis\Documents\GitHub\NPC Generator\obj\Release\NPC Generator.csproj.GenerateResource.cache
+C:\Users\joeis\Documents\GitHub\NPC Generator\obj\Release\NPC Generator.csproj.CoreCompileInputs.cache
+C:\Users\joeis\Documents\GitHub\NPC Generator\obj\Release\NPC Generator.exe
+C:\Users\joeis\Documents\GitHub\NPC Generator\obj\Release\NPC Generator.pdb
