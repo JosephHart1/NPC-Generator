@@ -23,14 +23,22 @@ namespace NPC_Generator
             if (genderRnd == 0) Gender = "Female";
             else Gender = "Male";
 
+            string Race;
+            int RaceRnd = rnd.Next(0, 10);
+            if (RaceRnd != 0) Race = "Human";
+            else
+            {
+                Race = getRandRepoData("Races");
+            }
+
             string FirstName = "Alan";
-            if (Gender == "Female") FirstName = getRepoData("Female Names");
-            else FirstName = getRepoData("Male Names");
+            if (Gender == "Female") FirstName = getRandRepoData("Female Names");
+            else FirstName = getRandRepoData("Male Names");
 
-            string Surname = getRepoData("Surnames");
+            string Surname = getRandRepoData("Surnames");
 
-            string MothersName = getRepoData("Female Names");
-            string FathersName = getRepoData("Male Names");
+            string MothersName = getRandRepoData("Female Names");
+            string FathersName = getRandRepoData("Male Names");
 
             Boolean Siblings = false;
             int NumBrothers = 0;
@@ -43,15 +51,15 @@ namespace NPC_Generator
                 NumSisters = rnd.Next(0, 5);
             }
 
-            string Appearance = getRepoData("Appearance");
+            string Appearance = getRandRepoData("Appearance");
 
-            string Background = getRepoData("Backgrounds");
-            string Goals = getRepoData("Goals");
-            string Personality = getRepoData("Personality");
-            string Profession = getRepoData("Professions");
-            string QuestRewards = getRepoData("Quest Rewards");
-            string Secret = getRepoData("Secrets");
-            return new NPCData(Gender, FirstName, Surname,
+            string Background = getRandRepoData("Backgrounds");
+            string Goals = getRandRepoData("Goals");
+            string Personality = getRandRepoData("Personality");
+            string Profession = getRandRepoData("Professions");
+            string QuestRewards = getRandRepoData("Quest Rewards");
+            string Secret = getRandRepoData("Secrets");
+            return new NPCData(Gender, Race, FirstName, Surname,
              MothersName, FathersName, Siblings,
              NumBrothers, NumSisters, Appearance,
              Background, Goals, Personality,
@@ -68,7 +76,7 @@ namespace NPC_Generator
             return 0;
         }
 
-        public string getRepoData(string listName)
+        public string getRandRepoData(string listName)
         {
             return npcDataRepo.repoData[getPosOfList(listName)][rnd.Next(0, npcDataRepo.repoData[getPosOfList(listName)].Count)];
         }

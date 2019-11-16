@@ -34,6 +34,10 @@ namespace NPC_Generator
 
         private void Button_Generate_Click(object sender, EventArgs e)
         {
+            npcList.Clear();
+            tableRows.Clear();
+            dView.Rows.Clear();
+            dView.Columns.Clear();
             int numNPCsToGenerate = Int32.Parse(TextBox_NoNPCs.Text);
             for (int i = 0; i < numNPCsToGenerate; i++)
             {
@@ -45,39 +49,40 @@ namespace NPC_Generator
 
         private void displayTable()
         {
-            tableRows.Clear();
-
             dView.ColumnCount++;
-            dView.Columns[0].Name = "Name";
+            dView.Columns[dView.ColumnCount - 1].Name = "Name";
             dView.ColumnCount++;
-            dView.Columns[1].Name = "Gender";
+            dView.Columns[dView.ColumnCount - 1].Name = "Gender";
             dView.ColumnCount++;
-            dView.Columns[2].Name = "Appearance";
+            dView.Columns[dView.ColumnCount - 1].Name = "Race";
             dView.ColumnCount++;
-            dView.Columns[3].Name = "Background";
+            dView.Columns[dView.ColumnCount - 1].Name = "Appearance";
             dView.ColumnCount++;
-            dView.Columns[4].Name = "Goals";
+            dView.Columns[dView.ColumnCount - 1].Name = "Background";
             dView.ColumnCount++;
-            dView.Columns[5].Name = "Personality";
+            dView.Columns[dView.ColumnCount - 1].Name = "Goals";
             dView.ColumnCount++;
-            dView.Columns[6].Name = "Profession";
+            dView.Columns[dView.ColumnCount - 1].Name = "Personality";
             dView.ColumnCount++;
-            dView.Columns[7].Name = "Quest Reward";
+            dView.Columns[dView.ColumnCount - 1].Name = "Profession";
             dView.ColumnCount++;
-            dView.Columns[8].Name = "Secret";
+            dView.Columns[dView.ColumnCount - 1].Name = "Quest Reward";
             dView.ColumnCount++;
-            dView.Columns[9].Name = "Mothers Name";
+            dView.Columns[dView.ColumnCount - 1].Name = "Secret";
             dView.ColumnCount++;
-            dView.Columns[10].Name = "Fathers Name";
+            dView.Columns[dView.ColumnCount - 1].Name = "Mothers Name";
             dView.ColumnCount++;
-            dView.Columns[11].Name = "Number of Brothers";
+            dView.Columns[dView.ColumnCount - 1].Name = "Fathers Name";
             dView.ColumnCount++;
-            dView.Columns[12].Name = "Number of Sisters";
+            dView.Columns[dView.ColumnCount - 1].Name = "Number of Brothers";
+            dView.ColumnCount++;
+            dView.Columns[dView.ColumnCount - 1].Name = "Number of Sisters";
 
             for (int i = 0; i < npcList.Count; i++)
             {
                 string[] rowToAdd = { npcList[i].FirstName + " " + npcList[i].Surname,
                 npcList[i].Gender,
+                npcList[i].Race,
                 npcList[i].Appearance,
                 npcList[i].Background,
                 npcList[i].Goals,

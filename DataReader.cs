@@ -19,6 +19,7 @@ namespace NPC_Generator
             "Personality",
             "Professions",
             "Quest Rewards",
+            "Races",
             "Secrets",
             "Male Names",
             "Surnames"

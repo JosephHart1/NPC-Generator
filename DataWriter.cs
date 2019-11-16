@@ -13,7 +13,7 @@ namespace NPC_Generator
         public void writeToCSV(List<string[]> tableRows)
         {
             StringBuilder csvText = new StringBuilder();
-            string tempS = "Name,Gender,Appearance,Background,Goals,Personality,Profession,Quest Reward,Secret,Mothers Name,Fathers Name,Number of Brothers,Number of Sisters";
+            string tempS = "Name,Gender,Race,Appearance,Background,Goals,Personality,Profession,Quest Reward,Secret,Mothers Name,Fathers Name,Number of Brothers,Number of Sisters";
             csvText.AppendLine(tempS);  //Titles
             for (int i = 0; i < tableRows.Count; i++)
             {
